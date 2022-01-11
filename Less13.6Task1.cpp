@@ -36,11 +36,14 @@ int main()
             num[nNewSize] = num[i];
             nNewSize++;
         }
-    }
-
-    num.resize(nNewSize);
-
+        else if (num[i] == nRemove && i == num.size() - 1) {
+            num.resize(num.size() - 1);
+        }
+    
     for (int i = 0; i < num.size(); i++) {
         cout << num[i] << " ";
     }
 }
+
+
+
